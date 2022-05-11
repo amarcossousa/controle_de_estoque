@@ -6,7 +6,7 @@ from src.infra.sqlalchemy.repositorios.repositorio_usuario import RepositorioUsu
 from typing import List
 router = APIRouter()
 
-@router.post('/usuario')
+@router.post('/usuario', status_code=status.HTTP_201_CREATED, response_model=UsuarioSimples)
 def create_user(user: Usuario, session: Session = Depends(get_db)):
     created_user = RepositorioUsuarios(session).create_user(user)
     return created_user
