@@ -6,6 +6,9 @@ class Categoria(BaseModel):
     id : Optional[int] = None
     nome_categoria : str
 
+    class Config:
+        orm_mode = True
+        
 
 class Produto(BaseModel):
     id : Optional[int] = None
