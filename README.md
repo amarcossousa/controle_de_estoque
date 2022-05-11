@@ -6,4 +6,8 @@ A API de ter:
 - CRUD Vendas
 - CRUD Categorias
 - Lista de produtos disponiveis
-- 
+
+Lista de conteudos utilizados:
+- Schemas - Forma como a aplicação ver os dados
+- Modelagem do banco de dados atravez dos models
+- Configuração usada para interar entra os schameas e os models e conexão com o DB 
