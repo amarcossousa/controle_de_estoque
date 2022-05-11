@@ -2,7 +2,7 @@ from datetime import datetime
 from pydantic import BaseModel
 from typing import Optional
 
-class Categorias(BaseModel):
+class Categoria(BaseModel):
     id : Optional[int] = None
     nome_categoria : str
 
@@ -15,8 +15,8 @@ class Produto(BaseModel):
     tamanho : int
     preco : float
     image : bytes
-    ativo : bool
-    # categoria : Forenkey de categoria 
+    ativo : bool = False
+    categoria = Optional[Categoria]
 
 
 class Usuario(BaseModel):
@@ -26,7 +26,7 @@ class Usuario(BaseModel):
     senha : str
 
 
-class Vendas(BaseModel):
+class Venda(BaseModel):
     id : Optional[int] = None
     total : int
     quantidade : int
