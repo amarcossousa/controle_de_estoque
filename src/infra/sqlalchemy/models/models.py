@@ -4,15 +4,15 @@ from src.infra.sqlalchemy.config.database import Base
 from sqlalchemy.orm import relationship
 
 
-class Categorias(Base):
-    __tablename__= 'categorias'
+class Categoria(Base):
+    __tablename__= 'categoria'
 
     id = Column(Integer, primary_key=True)
     nome_categoria = Column(String)
 
 
-class Produtos(Base):
-    __tablename__= 'produtos'
+class Produto(Base):
+    __tablename__= 'produto'
 
     id = Column(Integer, primary_key=True)
     nome = Column(String)
@@ -23,11 +23,11 @@ class Produtos(Base):
     image = Column(BigInteger)
     ativo = Column(Boolean)
 
-    categoria = relationship("Categorias", back_populates="categorias")
+    categoria = relationship("Categoria", back_populates="categorias")
 
 
-class Usuarios(Base):
-    __tablename__= 'usuarios'
+class Usuario(Base):
+    __tablename__= 'usuario'
 
     id = Column(Integer, primary_key=True)
     telefone = Column(String)
