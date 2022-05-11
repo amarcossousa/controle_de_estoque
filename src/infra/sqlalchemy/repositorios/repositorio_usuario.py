@@ -1,6 +1,8 @@
+from fastapi import Depends
 from sqlalchemy.orm import Session
 from src.schema import schemas
 from src.infra.sqlalchemy.models import models
+from sqlalchemy import select
 
 class RepositorioUsuarios():
 
@@ -16,11 +18,12 @@ class RepositorioUsuarios():
         self.session.commit()
         self.session.refresh(session_user)
         return session_user
+    
+    def read_user(self):
+        users = self.session.query(models.Usuario).all()
+        return users
 
     def delete_user(self):
-        ...
-
-    def read_user(self):
         ...
     
     def upadate_user(self):

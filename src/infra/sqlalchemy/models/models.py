@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, Float, \
-    String, Boolean, DateTime, BigInteger
+    String, Boolean, DateTime, BigInteger, ForeignKey
 from src.infra.sqlalchemy.config.database import Base
 from sqlalchemy.orm import relationship
 
@@ -10,6 +10,7 @@ class Categoria(Base):
     id = Column(Integer, primary_key=True)
     nome_categoria = Column(String)
 
+    produto = relationship("Produto")
 
 class Produto(Base):
     __tablename__= 'produto'
@@ -23,7 +24,7 @@ class Produto(Base):
     image = Column(BigInteger)
     ativo = Column(Boolean)
 
-    # categoria = relationship("Categoria", back_populates="categorias")
+    categoria_id = Column(Integer, ForeignKey('categoria.id'))
 
 
 class Usuario(Base):
