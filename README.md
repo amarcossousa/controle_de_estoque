@@ -1,13 +1,14 @@
 # API para simples controle de estoque
 
-A API de ter:
+A API deve ter:
 - CRUD Produtos
 - CRUD Usuarios
 - CRUD Vendas
 - CRUD Categorias
 - Lista de produtos disponiveis
+...
 
 Lista de conteudos utilizados:
 - Schemas - Forma como a aplicação ver os dados
 - Modelagem do banco de dados atravez dos models
-- Configuração usada para interar entra os schameas e os models e conexão com o DB 
+- Configuração usada para interar entra os schamas, models e conexão com o DB 
