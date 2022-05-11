@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException, Depends
+from requests import session
 from sqlalchemy.orm import Session
 from src.schema import schemas
 from src.infra.sqlalchemy.config.database import get_db
@@ -20,8 +21,9 @@ def update_user():
     pass
 
 @router.get('/usuario')
-def read_user_list():
-    pass
+def read_user_list(session: Session = Depends(get_db)):
+    list_user = RepositorioUsuarios(session).read_user()
+    return list_user
 
 @router.get('usuario/{id}')
 def read_user_id():
