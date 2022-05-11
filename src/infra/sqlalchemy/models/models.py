@@ -23,7 +23,7 @@ class Produto(Base):
     image = Column(BigInteger)
     ativo = Column(Boolean)
 
-    categoria = relationship("Categoria", back_populates="categorias")
+    # categoria = relationship("Categoria", back_populates="categorias")
 
 
 class Usuario(Base):
