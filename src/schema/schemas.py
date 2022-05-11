@@ -16,7 +16,7 @@ class Produto(BaseModel):
     preco : float
     image : bytes
     ativo : bool = False
-    categoria = Optional[Categoria]
+    categoria : Optional[Categoria]
 
 
 class Usuario(BaseModel):
@@ -24,6 +24,9 @@ class Usuario(BaseModel):
     telefone : str
     cpf : str
     senha : str
+
+    class Config:
+        orm_mode = True
 
 
 class Venda(BaseModel):
