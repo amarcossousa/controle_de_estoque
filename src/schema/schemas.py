@@ -19,6 +19,13 @@ class Produto(BaseModel):
     categoria : Optional[Categoria]
 
 
+class UsuarioSimples(BaseModel):
+    id : Optional[int] = None
+    cpf : str
+    
+    class Config:
+        orm_mode = True
+
 class Usuario(BaseModel):
     id : Optional[int] = None
     telefone : str

@@ -18,15 +18,13 @@ class RepositorioUsuarios():
         self.session.commit()
         self.session.refresh(session_user)
         return session_user
+    
+    def read_user(self):
+        users = self.session.query(models.Usuario).all()
+        return users
 
     def delete_user(self):
         ...
-
-    def read_user(self, session: Session):
-        read = select(session).where(session == 'usuario')
-        result = session.execute(read)
-        return result
-
     
     def upadate_user(self):
         ...
