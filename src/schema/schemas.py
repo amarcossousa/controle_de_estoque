@@ -21,6 +21,9 @@ class Produto(BaseModel):
     ativo : bool = False
     categoria : Optional[Categoria]
 
+    class Config:
+        orm_mode = True
+
 
 class UsuarioSimples(BaseModel):
     id : Optional[int] = None
@@ -45,4 +48,7 @@ class Venda(BaseModel):
     quantidade : int
     preco_unitario : float
     data : Optional[datetime] = None
+
+    class Config:
+        orm_mode = True
     

@@ -1,8 +1,6 @@
-from fastapi import Depends
 from sqlalchemy.orm import Session
 from src.schema import schemas
 from src.infra.sqlalchemy.models import models
-from sqlalchemy import select
 
 class RepositorioUsuarios():
 
