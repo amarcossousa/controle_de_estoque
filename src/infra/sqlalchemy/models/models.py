@@ -36,7 +36,7 @@ class Usuario(Base):
     senha = Column(String)
 
 
-class venda(Base):
+class Venda(Base):
     __tablename__ = 'venda'
 
     id = Column(Integer, primary_key=True)
