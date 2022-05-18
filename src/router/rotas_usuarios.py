@@ -4,6 +4,8 @@ from src.schema.schemas import Usuario, UsuarioSimples
 from src.infra.sqlalchemy.config.database import get_db
 from src.infra.sqlalchemy.repositorios.repositorio_usuario import RepositorioUsuarios
 from typing import List
+
+
 router = APIRouter()
 
 @router.post('/usuario', status_code=status.HTTP_201_CREATED, response_model=UsuarioSimples)
