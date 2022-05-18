@@ -41,7 +41,7 @@ class Venda(Base):
 
     id = Column(Integer, primary_key=True)
     total = Column(Integer)
-    quantidade : Column(Integer)
+    quantidade = Column(Integer)
     preco_unitario = Column(Float)
     data = Column(DateTime)
 
