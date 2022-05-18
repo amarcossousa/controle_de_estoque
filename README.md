@@ -12,3 +12,4 @@ Lista de conteudos utilizados:
 - Schemas - Forma como a aplicação ver os dados
 - Modelagem do banco de dados atravez dos models
 - Configuração usada para interar entra os schemas, models e conexão com o DB 
+- Banco de dados com postgreSQL
