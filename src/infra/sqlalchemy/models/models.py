@@ -43,7 +43,7 @@ class Venda(Base):
     total = Column(Integer)
     quantidade = Column(Integer)
     preco_unitario = Column(Float)
-    data = Column(DateTime)
+    # data = Column(DateTime)
 
 
 
