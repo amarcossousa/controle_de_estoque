@@ -1,7 +1,10 @@
+from email.policy import default
+from this import d
 from sqlalchemy import Column, Integer, Float, \
     String, Boolean, DateTime, BigInteger, ForeignKey
 from src.infra.sqlalchemy.config.database import Base
 from sqlalchemy.orm import relationship
+import datetime
 
 
 class Categoria(Base):
@@ -43,7 +46,7 @@ class Venda(Base):
     total = Column(Integer)
     quantidade = Column(Integer)
     preco_unitario = Column(Float)
-    # data = Column(DateTime)
+    data = Column(DateTime, default=datetime.datetime.utcnow)
 
 
 

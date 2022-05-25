@@ -1,8 +1,8 @@
 """alter table venda
 
-Revision ID: f5947085d111
-Revises: f24ae819272c
-Create Date: 2022-05-23 22:25:46.741728
+Revision ID: 6a6c1396e284
+Revises: 2f51066f8623
+Create Date: 2022-05-24 23:44:39.844329
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'f5947085d111'
-down_revision = 'f24ae819272c'
+revision = '6a6c1396e284'
+down_revision = '2f51066f8623'
 branch_labels = None
 depends_on = None
 
