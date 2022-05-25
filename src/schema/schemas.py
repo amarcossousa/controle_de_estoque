@@ -47,7 +47,7 @@ class Venda(BaseModel):
     total : int
     quantidade : int
     preco_unitario : float
-    data : Optional[datetime] = None
+    # data : Optional[datetime] = None
 
     class Config:
         orm_mode = True

@@ -11,8 +11,8 @@ class RepositorioVendas():
     def create_venda(self, venda: schemas.Venda):
         criar_venda = models.Venda(total=venda.total,
                                     quantidade=venda.quantidade,
-                                    preco_unitario=venda.preco_unitario,
-                                    data=venda.data)
+                                    preco_unitario=venda.preco_unitario
+                                    )
         self.session.add(criar_venda)
         self.session.commit()
         self.session.refresh(criar_venda)
@@ -28,5 +28,5 @@ class RepositorioVendas():
         pass
 
 
-
+''
 
