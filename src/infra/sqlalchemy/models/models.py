@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, Float, \
     String, Boolean, DateTime, BigInteger, ForeignKey
 from src.infra.sqlalchemy.config.database import Base
 from sqlalchemy.orm import relationship
-import datetime
+from datetime import datetime
 
 
 class Categoria(Base):
@@ -43,10 +43,10 @@ class Venda(Base):
     __tablename__ = 'venda'
 
     id = Column(Integer, primary_key=True)
-    total = Column(Integer)
+    total = Column(Integer) # Isso deve ser o produto, que vem da table 'Produto'
     quantidade = Column(Integer)
     preco_unitario = Column(Float)
-    data = Column(DateTime, default=datetime.datetime.utcnow)
+    data = Column(DateTime, default=datetime.now)
 
 
 
