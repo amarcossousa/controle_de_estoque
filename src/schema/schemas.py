@@ -1,4 +1,3 @@
-from datetime import datetime
 from pydantic import BaseModel
 from typing import Optional
 
@@ -47,7 +46,6 @@ class Venda(BaseModel):
     total : int
     quantidade : int
     preco_unitario : float
-    # data : Optional[datetime] = None
 
     class Config:
         orm_mode = True
