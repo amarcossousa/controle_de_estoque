@@ -1,5 +1,3 @@
-from email.policy import default
-from this import d
 from sqlalchemy import Column, Integer, Float, \
     String, Boolean, DateTime, BigInteger, ForeignKey
 from src.infra.sqlalchemy.config.database import Base
