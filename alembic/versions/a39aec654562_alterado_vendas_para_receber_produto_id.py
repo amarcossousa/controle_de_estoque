@@ -1,8 +1,8 @@
-"""alter table venda
+"""Alterado vendas para receber produto_id
 
-Revision ID: 59bedf146d7b
-Revises: 
-Create Date: 2022-05-24 23:39:31.112721
+Revision ID: a39aec654562
+Revises: 572379ccc766
+Create Date: 2022-05-27 00:19:11.835784
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '59bedf146d7b'
-down_revision = None
+revision = 'a39aec654562'
+down_revision = '572379ccc766'
 branch_labels = None
 depends_on = None
 

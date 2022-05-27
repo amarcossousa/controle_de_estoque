@@ -26,7 +26,7 @@ class Produto(Base):
     ativo = Column(Boolean)
 
     categoria_id = Column(Integer, ForeignKey('categoria.id'))
-
+    venda = relationship("Venda")
 
 class Usuario(Base):
     __tablename__= 'usuario'
@@ -41,10 +41,12 @@ class Venda(Base):
     __tablename__ = 'venda'
 
     id = Column(Integer, primary_key=True)
-    total = Column(Integer) # Isso deve ser o produto, que vem da table 'Produto'
+    total = Column(Integer) 
     quantidade = Column(Integer)
     preco_unitario = Column(Float)
     data = Column(DateTime, default=datetime.now)
+
+    produto_id = Column(Integer, ForeignKey('produto.id'))
 
 
 
