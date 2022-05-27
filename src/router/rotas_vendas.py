@@ -12,4 +12,7 @@ def criar_venda(pd_venda: schemas.Venda, session: Session = Depends(get_db)):
     venda_criada = RepositorioVendas(session).create_venda(pd_venda)
     return venda_criada
 
-
+@router.get('/vendas', status_code=status.HTTP_202_ACCEPTED) # deve receber apenas as vendas de cada usuario logado ou por ID
+def list_vendas(session: Session = Depends(get_db)):
+    lista_vendas = RepositorioVendas(session).listar_venda()
+    return lista_vendas
