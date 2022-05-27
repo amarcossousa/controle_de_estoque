@@ -43,10 +43,12 @@ class Usuario(BaseModel):
 
 class Venda(BaseModel):
     id : Optional[int] = None
+    produto_id : Optional[int]
     total : int
     quantidade : int
     preco_unitario : float
 
     class Config:
         orm_mode = True
+        
     
