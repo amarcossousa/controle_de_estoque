@@ -1,6 +1,7 @@
 from src.schema import schemas 
 from sqlalchemy.orm import Session
 from src.infra.sqlalchemy.models import models
+from sqlalchemy import select
 
 
 class RepositorioVendas():
@@ -24,9 +25,6 @@ class RepositorioVendas():
     def remove_venda(self):
         pass
 
-    def listar_veda(self):
-        pass
-
-
-''
-
+    def listar_venda(self):
+        stmt = self.session.query(models.Venda).all()
+        return stmt
