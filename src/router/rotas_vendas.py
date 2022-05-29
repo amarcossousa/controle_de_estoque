@@ -16,3 +16,8 @@ def criar_venda(pd_venda: schemas.Venda, session: Session = Depends(get_db)):
 def list_vendas(session: Session = Depends(get_db)):
     lista_vendas = RepositorioVendas(session).listar_venda()
     return lista_vendas
+
+@router.delete('/venda/{id}', status_code=status.HTTP_202_ACCEPTED)
+def remover_venda(id: int, session: Session =Depends(get_db)):
+    removido = RepositorioVendas(session).remove_venda(id)
+    return removido

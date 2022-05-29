@@ -13,6 +13,7 @@ class Categoria(Base):
 
     produto = relationship("Produto")
 
+
 class Produto(Base):
     __tablename__= 'produto'
 
@@ -27,6 +28,7 @@ class Produto(Base):
 
     categoria_id = Column(Integer, ForeignKey('categoria.id'))
     venda = relationship("Venda")
+
 
 class Usuario(Base):
     __tablename__= 'usuario'
