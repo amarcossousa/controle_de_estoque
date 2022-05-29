@@ -1,7 +1,7 @@
 from src.schema import schemas 
 from sqlalchemy.orm import Session
 from src.infra.sqlalchemy.models import models
-from sqlalchemy import select
+from sqlalchemy import select, delete
 
 
 class RepositorioVendas():
@@ -22,8 +22,11 @@ class RepositorioVendas():
     def update_venda(self):
         pass
 
-    def remove_venda(self):
-        pass
+    def remove_venda(self, id: int):
+        stmt = delete(models.Venda).where(models.Venda.id == id)
+        self.session.execute(stmt)
+        self.session.commit()
+        return {'msg': 'Venda excluida'}
 
     def listar_venda(self):
         stmt = self.session.query(models.Venda).all()
